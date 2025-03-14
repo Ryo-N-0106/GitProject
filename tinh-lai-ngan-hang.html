@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chương trình tính lãi vay ngân hàng</title>
+</head>
+<body>
+    <h1>Tính tiền vay ngân hàng</h1>
+<button type="button" onclick="tinhtong()" value="Tổng số tiền">Tính kết quả</button>
+<script>
+    function tinhtong() {
+        let Sotienvay = 30000000;
+        let Laithang = 0.2;
+        let Thangvay = 5;
+        let Tienlai = Sotienvay*Laithang*Thangvay;
+        let Tongtien = (Tienlai)+Sotienvay;
+        document.write('Tiền lãi =' + Tienlai);
+        document.write('Số tiền phải trả =' + Tongtien);
+    }
+</script>
+
+</body>
+</html>
