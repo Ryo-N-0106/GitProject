@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bội số</title>
+</head>
+<body>
+    <input type="button" value="Click Me!" onclick="Check()">
+    <script>
+        function Check() {
+            let a = prompt("Hãy nhập số a");
+            let b = prompt("Hãy nhập số b");
+            let x = a % b;
+            if (x == 0) {
+                alert("a là bội số của b")
+                } else {
+                alert("a không phải là bội số của b")
+            }
+        }
+    </script>
+</body>
+</html>
