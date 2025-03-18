@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Chương trình tính lãi vay ngân hàng</title>
+</head>
+<body>
+<h1>Tính lãi vay ngân hàng</h1>
+
+  <input type="number" id="Tienvay"><br>
+  <input type="number" id="Laithang"><br>
+  <input type="number" id="Thangvay"><br>
+<br>
+<button type="button" onclick="tinhtong()" value="Tính tổng">Tính kết quả</button>
+
+<script>
+  function tinhtong() {
+    let tien_vay = parseFloat(document.getElementById("Tienvay").value);
+    let lai_thang = parseFloat(document.getElementById("Laithang").value);
+    let thang_vay = parseFloat(document.getElementById("Thangvay").value);
+
+    let tong_tien = (tien_vay * lai_thang * thang_vay) + tien_vay;
+    document.write('Kết quả =' + tong_tien)
+  }
+
+</script>
+</body>
+</html>
