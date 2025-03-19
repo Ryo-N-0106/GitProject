@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính chỉ số cân nặng cơ thể</title>
+</head>
+<body>
+    Chiều cao (m) : <br>
+    <input type="number" id="chieu_cao" value="Chiều Cao"><br>
+    Cân nặng (kg): <br>
+    <input type="number" id="can_nang" value="Cân nặng"><br>
+    <br>
+    <input type="button" onclick="TinhBMI()" value="Tính chỉ số">
+    <script>
+        function TinhBMI() {
+        let height = parseFloat(document.getElementById("chieu_cao").value);
+        let weight = parseFloat(document.getElementById("can_nang").value);
+
+        let BMI = weight / (height^2);
+
+        if (BMI < 18.5) {
+                document.write("Underweight");
+            } else if (BMI < 25) {
+                document.write("Normal");
+            } else if (BMI < 30) {
+                document.write("Overweight");
+            } else {
+                document.write("Obese");}
+        }
+    </script>
+
+</body>
+</html>
