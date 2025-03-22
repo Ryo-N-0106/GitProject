@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kết quả học tập</title>
+</head>
+<body>
+  <h1 style="color: darkgreen">Tính kết quả học tập</h1>
+  <p id="result"></p>
+    <form>
+        Họ và tên : <br>
+        <input type="text"><br><br>
+        Điểm Vật lý : <br>
+        <input type="number" id="VatLy"><br><br>
+        Điểm Hóa học : <br>
+        <input type="number" id="Hoahoc"><br><br>
+        Điểm Sinh học : <br>
+        <input type="number" id="Sinhhoc"><br>
+        <br>
+        <input type="button" onclick="Tinhdiem()" value="Tính điểm">
+    </form>
+
+    <p id="demo">Điểm tổng :</p>
+    <p id="demo2">Điểm trung bình :</p>
+    <script>
+        function Tinhdiem(diem) {
+            var physic = parseInt(document.getElementById("VatLy").value);
+            var chemistry = parseInt(document.getElementById("Hoahoc").value);
+            var biology = parseInt(document.getElementById("Sinhhoc").value);
+
+            var Tong = physic + chemistry + biology;
+            var Diem_trung_binh = (physic + chemistry + biology) / 3;
+
+            document.getElementById("demo").innerHTML = Tong + " " + "điểm";
+            document.getElementById("demo2").innerHTML = Diem_trung_binh + " " + "điểm";
+        }
+    </script>
+</body>
+</html>
