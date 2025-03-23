@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính diện tích hình tròn</title>
+</head>
+  <h1>DIỆN TÍCH HÌNH TRÒN</h1>
+<body>
+    Bán kính : <br>
+    <input type="number" id="Bankinh"><br><br>
+
+    <input type="button" onclick="Tinhdientich()" value="Tính">
+    <p id="Dientich">Diện tích ?</p>
+
+    <script>
+        function Tinhdientich() {
+            var r = parseInt(document.getElementById("Bankinh").value);
+            var S = 3.14 * r^2;
+            document.getElementById("Dientich").innerHTML = "Diện tích :" + S;
+        }
+    </script>
+
+</body>
+</html>

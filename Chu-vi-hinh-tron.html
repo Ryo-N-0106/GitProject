@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+    <h1>CHU VI HÌNH TRÒN</h1>
+<body>
+    Bán kính : <br>
+    <input type="number" id="Bankinh"><br><br>
+
+    <input type="button" onclick="Tinhchuvi()" value="Tính">
+    <p id="ChuVi">Chu vi ?</p>
+
+    <script>
+        function Tinhchuvi() {
+            var r = parseInt(document.getElementById("Bankinh").value);
+            var Chuvi = 2 * 3.14 * r;
+            document.getElementById("ChuVi").innerHTML = "Chu vi :" + Chuvi;
+        }
+    </script>
+</body>
+</html>
