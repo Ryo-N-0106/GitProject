@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính năm nhuận</title>
+</head>
+    <h1>KIỂM TRA NĂM NHUẬN</h1>
+<body>
+    <input type="button" onclick="Tinhnamnhuan()" value="Check!">
+    <p id="result"></p>
+    <script>
+        function Tinhnamnhuan() {
+            let year = parseInt(prompt("Hãy nhập số năm :"));
+            if (year % 4 === 0) {
+                if (year % 100 !== 0) {
+                    document.getElementById('result').innerHTML = year + ' ' + 'là năm nhuận';
+                } else {
+                    if (year % 400 !== 0) {
+                        document.getElementById('result').innerHTML = year + ' ' + 'không phải là năm nhuận';
+                    } else {
+                        if (year % 100 === 0) {
+                            document.getElementById('result').innerHTML = year + ' ' + 'là năm nhuận';
+                        }
+                    }
+                }
+            } else {
+                document.getElementById('result').innerHTML = year + ' ' + 'không phải là năm nhuận';
+            }
+        }
+    </script>
+</body>
+</html>
