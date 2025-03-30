@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng dụng chuyển đổi tiền tệ</title>
+</head>
+    <h1>CHUYỂN ĐỔI TIỀN TỆ</h1>
+<body>
+<table>
+    <tr>
+        <th>Amount :</th>
+        <th>From Currency :</th>
+        <th>To Currency :</th>
+    </tr>
+    <tr>
+        <td>
+            <input type="number" id="SoTien" placeholder="Hãy nhập số tiền">
+        </td>
+        <td>
+            <select id="MenhGiaGoc">
+                <option value="VND">VND</option>
+                <option value="USD">USD</option>
+            </select>
+        </td>
+        <td>
+            <select id="MenhGiaDoi">
+                <option value="VND">VND</option>
+                <option value="USD">USD</option>
+            </select>
+        </td>
+        <td>
+            <input type="button" onclick="Convert()" value="Convert">
+        </td>
+    </tr>
+</table>
+
+    <p id="result"></p>
+
+    <script>
+        function Convert() {
+            var a = parseInt(document.getElementById("SoTien").value);
+            var b = document.getElementById("MenhGiaGoc").value;
+            var c = document.getElementById("MenhGiaDoi").value;
+
+
+            if (b === "VND" && c === "USD") {
+                document.getElementById("result").innerHTML = a / 25000;
+            }
+            if (b === "USD" && c === "VND") {
+                document.getElementById("result").innerHTML = a * 25000;
+            }
+
+        }
+    </script>
+
+</body>
+</html>
