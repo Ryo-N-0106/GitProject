@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bảng Cửu Chương</title>
+</head>
+  <h1>BẢNG CỬU CHƯƠNG</h1>
+<body>
+  <table border="1">
+    <script>
+      for (var a = 1; a <= 9; a++) {
+          document.write("<tr>");
+        for (var b = 2; b <= 10; b++) {
+          let phep_nhan = a * b;
+          document.write("<td>" + b + "x" + a + "=" + phep_nhan + "</td>");
+        }
+      }
+      document.write("</tr");
+
+    </script>
+  </table>
+</body>
+</html>
