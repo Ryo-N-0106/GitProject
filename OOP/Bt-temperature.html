@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Temperature</title>
+</head>
+<body>
+
+</body>
+<script>
+
+  class Temperature {
+    constructor(celsius) {
+      if (celsius < -273.15) {
+        alert("Nhiệt độ tối thiểu là -273.15");
+      } else {
+          this.Celsius = celsius;
+      }
+    }
+
+    convertFahrenheit() {
+      return (this.Celsius * 1.8) + 32;
+    }
+
+    convertKelvin() {
+      return this.Celsius + 273.15;
+    }
+  }
+
+  let temperature1 = new Temperature(25);
+
+  document.write("Nhiệt độ F : " + temperature1.convertFahrenheit());
+  document.write("<br>");
+  document.write("Nhiệt độ K : " + temperature1.convertKelvin());
+
+
+</script>
+
+</html>
