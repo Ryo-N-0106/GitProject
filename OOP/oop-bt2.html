@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xây dựng lớp Hình tròn</title>
+</head>
+<body>
+<form>
+    <table>
+        <tr>
+            <th style="width: 100px">Radius : </th>
+            <th style="width: 100px">Color : </th>
+        </tr>
+        <tr>
+            <td><input type="text" id="radius"></td>
+            <td><input type="text" id="color"></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <button onclick="getArea()">SHOW</button>
+            </td>
+        </tr>
+
+    </table>
+</form>
+<p id="result">Diện tích??</p>
+
+</body>
+<script>
+
+    class Circle {
+        constructor(radius) {
+            this.radius = radius;
+        }
+
+        getRadius() {
+            return this.radius;
+        }
+
+        getArea() {
+            return Math.PI * this.radius * this.radius;
+        }
+    }
+
+    // let circle1 = new Circle(3);
+    function getArea() {
+        let circle1 = new Circle(document.getElementById('radius').value);
+
+        // document.write("Bán kính : " + circle1.getRadius());
+        // document.write("<br>");
+        // document.write("Diện tích : " + circle1.getArea());
+        document.getElementById("result").innerHTML = "Bán kính : " + circle1.getRadius() + "<br>" + "Diện tích : " + circle1.getArea();
+    }
+
+</script>
+
+</html>
